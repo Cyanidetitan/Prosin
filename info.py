@@ -51,7 +51,7 @@ SUPPORT_CHAT_ID = -1001586942391
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://zoro:dono@cluster0.vbvafq7.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://erai:raws@cluster1.zefvxlt.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "ANIMXT")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
