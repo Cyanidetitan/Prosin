@@ -95,7 +95,7 @@ async def next_page(bot, query):
     temp.FILES_IDS[key] = files
     
     def get_file_name_without_prefix(file):
-    return re.sub(r'^.*?-','episode-', file.file_name)
+        return re.sub(r'^.*?-','episode-', file.file_name)
     
     if settings['button']:
         btn = [
