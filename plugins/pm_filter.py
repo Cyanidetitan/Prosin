@@ -93,15 +93,11 @@ async def next_page(bot, query):
     settings = await get_settings(query.message.chat.id)
     pre = 'filep' if settings['file_secure'] else 'file'
     temp.FILES_IDS[key] = files
-    
-    def get_file_name_without_prefix(file):
-        return re.sub(r'^.*?-','episode-', file.file_name)
-    
     if settings['button']:
         btn = [
             [
                 InlineKeyboardButton(
-                   text=f"🗂️{get_size(file.file_size)}🔮{get_file_name_without_prefix(file)}", callback_data=f'{pre}#{file.file_id}'
+                   text=f"🔖{get_size(file.file_size)}🔮{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
